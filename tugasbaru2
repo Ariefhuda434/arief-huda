@@ -1,0 +1,39 @@
+/* Namafile: uts2024_2.c
+   menampilkan bilangan positip dan genap, 0, 
+   positip dan ganjil, atau negatip genap, 
+   negatip ganjil
+*/
+   
+#include <stdio.h>
+
+int main()
+{
+	int bil;
+	
+	printf("Berikan sebuah bilangan bulat: ");
+	if(scanf("%d", &bil) != 0)
+	{
+		if(bil > 0)
+		{
+			printf("%d: positip ", bil);	
+			if(bil%2 == 0)
+				printf("dan genap\n");
+			else
+				printf("dan ganjil\n");
+		}
+		else if(bil < 0)
+		{
+			printf("%d: negatip ", bil);	
+			if(bil%2 == 0)
+				printf("dan genap\n");
+			else
+				printf("dan ganjil\n");
+		}
+		else
+			printf("%d ", bil);
+	}
+	else
+		printf("Bukan bilangan\n");
+	
+	return 0;
+}
